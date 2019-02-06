@@ -1,0 +1,39 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <style>
+      body {transition :  0.5s;}
+      .header
+      {
+        float:left;
+        width : 101%;
+        text-align: center;
+        background:#f1f1f1;
+        position:relative;
+        margin-left:-10px; 
+        margin-top:-10px ;
+       margin-right: -100px;        
+      }
+      side-nav-bar
+      {
+        float :left;
+        margin-left: 5%;
+        position: relative;
+      }
+    </style>
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Elements 101</title>
+  </head>
+  <body>
+    
+    <div id="header" class ="header" >
+       <side-nav-bar links='[{ "name":"Home", "url":"#home" },{ "name":"About", "url":"#about" },{ "name":"Contact", "url":"#contact" },{"name" : "About Us" ,"url" : "#abtus"},{"name" : "Google" ,"url" : "https://www.google.com/"}]'></side-nav-bar>
+    <h3>TITLE OF THE PAGE</h1>
+      </div>
+       <script src="./app.js">
+      </script>
+    </body>
+  </html>

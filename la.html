@@ -1,0 +1,128 @@
+<html>
+<head>
+<script>
+let flag=0;
+function navBarTrigger()
+{
+    let navBar = document.getElementById("navbar");
+    if(flag==0)
+    {
+    navBar.style.width = 200+"px";
+   document.getElementById("main").style.marginLeft = 200+"px"
+        flag=1;
+    }
+    else
+    {
+        navBar.style.width = 0+"px";
+   document.getElementById("main").style.marginLeft = 0+"px"
+
+        flag=0;   
+    }
+   
+}
+function activeClass(el)
+{
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    el.classList.add("active");
+}
+
+</script> 
+<style>
+    #main {transition: 0.5s;}
+#navbarbtn{
+        cursor:pointer;
+        float :left;
+        display :block;
+        margin-left:0px;
+        padding :5px;
+        height : 25px;
+        top:0;
+        position: fixed;
+
+      }
+      #navbarbtn div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+        transition : 0.8s;
+       }
+      
+      #navbarbtn:hover  div
+      {
+        box-shadow:  2px 2px 2px #888888;
+         background-color:gray;
+      }
+      
+      .navbar
+      {
+          display: block;
+        top :0;
+        left:0;
+        width: 0px;
+        position :fixed;
+        background-color: #f1f1f1;
+        position: fixed;
+        overflow-x:hidden;
+        height: 100%;
+        transition : width 0.5s;
+      }
+      .navbar a
+      {  
+        padding : 16px;
+        display:block;
+        text-decoration:none;
+        color:black;
+        transition : 0.7s;
+      }
+      .navbar a.active
+      {
+       background:#4CAF50;
+        color :white;
+      }
+      .navbar a:hover:not(.active)
+      {
+        color : white;
+          background : black;
+      }
+      @media screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #navbarbtn {display: none;}
+  .navbar a {float: left;}
+ #main {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    text-align: center;
+    float: none;
+  }
+  #navbarbtn {display: none;}
+}
+      </style>
+</head>
+<body > 
+ 
+   <div class="navbar" id="navbar" >
+
+   <a href="#home" class="active" onclick="activeClass(this)">Home</a> 
+   <a href="#about" onclick="activeClass(this)">About</a>  
+   <a href="#contact" onclick="activeClass(this)">Contact</a>
+   </div>
+   <div id="main">
+       <div id="navbarbtn" type="button" onclick="navBarTrigger()"> 
+        <div></div>
+        <div></div>
+        <div></div>
+     </div> 
+<br>
+     <h2>Collapsed Sidebar</h2>
+  <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    </div>
+   
+    </body>
+    
