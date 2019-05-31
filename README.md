@@ -1,2 +1,2 @@
 # My-first-component
-A sie nav bar web component tha can be used effectively 
+A side nav bar web component using VANILLA JS
